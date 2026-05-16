@@ -2,7 +2,7 @@
 
 A static e-commerce storefront built with HTML, CSS, and JavaScript. This project simulates a fashion and lifestyle shopping experience with product browsing, cart management, user authentication flow, and admin pages.
 
-## Demo :-
+## Demo :- https://nestecommercewebsite.netlify.app/
 
 ## ✅ Project Overview
 
