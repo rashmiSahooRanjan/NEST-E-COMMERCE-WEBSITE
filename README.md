@@ -27,16 +27,29 @@ A static e-commerce storefront built with HTML, CSS, and JavaScript. This projec
 
 Below are the screenshot files used to illustrate the website pages. Add these images to the repository and update the paths if needed.
 
-- `./screenshort/1.png`
-- `./screenshort/2.png`
-- `./screenshort/3.png`
-- `./screenshort/4.png`
-- `./screenshort/5.png`
-- `./screenshort/6.png`
-- `./screenshort/7.png`
-- `./screenshort/8.png`
-- `./screenshort/9.png`
+<table>
+  <tr>
+    <td><img src="./screenshort/1.png"  alt="home" /></td>
+    <td><img src="./screenshort/2.png"  alt="slider" /></td>
+  </tr>
+  <tr>
+    <td><img src="./screenshort/3.png"  alt="men" /></td>
+   <td><img src="./screenshort/4.png"  alt="allProducts" /></td>
+  </tr>
+  <tr>
+    <td><img src="./screenshort/5.png" alt="allProducts" /></td>
+    <td><img src="./screenshort/6.png"  alt="men" /></td>
+  </tr>
+  <tr>
+    <td><img src="./screenshort/7.png" alt="allProducts" /></td>
+    <td><img src="./screenshort/8.png"  alt="men" /></td>
+  </tr>
+  <tr>
+    <td><img src="https://i.ibb.co/59WnSW8/9.png"  alt="men" /></td>
+  </tr>
+</table>
 
+<br />
 > Tip: Create a `screenshots/` folder in the repository and save these screenshots there, then reference them from this README.
 
 ## 📁 Project Structure
