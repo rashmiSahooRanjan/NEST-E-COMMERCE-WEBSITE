@@ -52,9 +52,6 @@ Below are the screenshot files used to illustrate the website pages. Add these i
         <tr>
     <td><img src="./screenshort/8.png"  alt="men" /></td>
   </tr>
-  <tr>
-    <td><img src="https://i.ibb.co/59WnSW8/9.png"  alt="men" /></td>
-  </tr>
 </table>
 
 <br />
