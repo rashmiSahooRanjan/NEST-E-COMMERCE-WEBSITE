@@ -1,0 +1,253 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1%;
+    /* border: 1px solid red; */
+    height: 10vh;
+    align-items: center;
+     box-shadow: 0px 0px 5px #9a9a9a;
+
+}
+#nav_div1{
+    width: 20%;
+    height: 6vh;
+     /* border: 1px solid red; */
+     margin-left: 4%;
+    
+}
+#nav_div1>img{
+    width: 100%;
+    height: 100%;
+     border-radius: 8px;
+     
+}
+#nav_div2{
+    display: flex;
+    margin-right: 2%;
+    justify-content: space-between;
+    align-items: center;
+   
+    /* border: 1px solid black; */
+    
+    width: 8%;
+}
+#aniket_nav{
+    width: 30%;
+    height: 5vh;  
+
+}
+#aniket_nav>img{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    margin-left: 1%;
+}
+
+#background{
+    display: flex;
+    /* border: 1px solid blue; */
+   
+    margin-top: 1%;
+    margin-bottom: 1%;
+    height: 5vh;
+    padding-left: 3%;
+}
+#black ,#white{
+   width: 3%;
+   height: 3vh;
+   margin-left: 2%;
+}
+#black>img,#white>img{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+#aniket_dashboard{
+    display: flex;
+    width: 95%;
+    height: 130vh;
+    margin: auto
+    /* background-color: aqua; */
+    /* border: 1px solid black; */
+    
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+#all{
+    width: 30%;
+    /* border: 1px solid red; */
+    border-radius: 10px 0px 0px 10px;
+    background-color: #2f4254;
+}
+.crud{
+    display: flex;
+    align-items: center;
+    /* border: 1px solid purple; */
+  
+    margin-top: 9%;
+    height: 7vh;
+    padding: 2%;
+    border-radius: 10px 0px 0px 10px;
+    color: #FFFFFF;
+}
+.crud>div{
+    width: 15%;
+    height: 80%;
+    margin-right: 3%;
+   
+   
+}
+.crud>div>img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    
+}
+#Addproduct{
+    background-color: #9a9a9a;
+}
+
+.crud:hover{
+   background-color: #9a9a9a;
+}
+#aniket_product{
+    width: 100%;
+}
+
+#data{
+    display: flex;
+    /* border: 1px solid red; */
+    width: 100%;
+    justify-content: space-evenly;
+
+}
+#data>button{
+    width: 10%;
+    height: 4vh;
+    margin-bottom: 2%;
+    background-color: #2f4254;;
+    color: #FFFFFF;
+    border-radius: 4px;
+}
+ /* form */
+ #form{
+    display: none;
+    border: 2px solid #2f4254;;
+    width: 35%;
+    margin: auto;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px #9a9a9a;
+ }
+ form>input:hover{
+     background-color: #2f4254;;
+     color: #FFFFFF;
+ }
+ #form>img{
+    width: 5%;
+    height: 4vh;
+    margin-left: 90%;
+ }
+ form{
+    margin-left: 4%;
+ }
+ form>input{
+    margin-bottom: 7px;
+    width: 80%;
+    height: 4vh;
+    border-radius: 4px;
+    padding-left: 2px;
+ }
+ form>select{
+    margin-bottom: 2%;
+    width: 40%;
+    height: 4vh;
+ }
+
+
+
+
+
+#data>div:hover{
+    background-color: #9a9a9a;
+    color: black;
+
+}
+
+#aniket_product{
+    border: 2px solid #2f4254;
+    border-radius: 0px 10px 10px 0px;
+ 
+   
+}
+#aniket_product>div:nth-child(2){
+   height: 67vh;
+    
+}
+#product{
+    /* border: 1px solid blue; */
+}
+.Allproduct{
+    /* display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+    margin-left: 2%;
+    height: 30vh; */
+
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 25px;
+    margin-left: 2%;
+    height: 100%;
+}
+.Allproduct>div{
+    /* width: 90%;
+    height: 30vh;
+    /* border: 1px solid blue; */
+    /* text-align: center; */ 
+
+    width: 90%;
+    height: 100%;
+    /* border: 1px solid blue; */
+    margin-top: 7%;
+    text-align: center;
+}
+.Allproduct>div>img{
+    width: 100%;
+    height: 90%;
+   
+    border-radius: 3px 3px 0px 0px;
+}
+/* .Allproduct>div>img:hover{
+    transform: scale(1.1);
+} */
+#product{
+    /* border: 1px solid rgb(219, 205, 205); */
+    height: 50vh;
+}
+
+#pagination{
+    /* border: 1px solid red; */
+    
+    margin: auto;
+    padding-left: 30%;
+    padding-top: 40%;
+    height: 5vh;
+}
+
+#pagination>button{
+    width: 10%;
+    margin-left: 1%;
+    height: 100%;
+    border-radius: 4px;
+    background-color:#2f4254;
+    color: #FFFFFF;
+}
