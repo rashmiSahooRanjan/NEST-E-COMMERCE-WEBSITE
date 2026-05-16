@@ -30,18 +30,26 @@ Below are the screenshot files used to illustrate the website pages. Add these i
 <table>
   <tr>
     <td><img src="./screenshort/1.png"  alt="home" /></td>
+  </tr>
+        <tr>
     <td><img src="./screenshort/2.png"  alt="slider" /></td>
   </tr>
   <tr>
     <td><img src="./screenshort/3.png"  alt="men" /></td>
+      </tr>
+        <tr>
    <td><img src="./screenshort/4.png"  alt="allProducts" /></td>
   </tr>
   <tr>
     <td><img src="./screenshort/5.png" alt="allProducts" /></td>
+      </tr>
+        <tr>
     <td><img src="./screenshort/6.png"  alt="men" /></td>
   </tr>
   <tr>
     <td><img src="./screenshort/7.png" alt="allProducts" /></td>
+      </tr>
+        <tr>
     <td><img src="./screenshort/8.png"  alt="men" /></td>
   </tr>
   <tr>
