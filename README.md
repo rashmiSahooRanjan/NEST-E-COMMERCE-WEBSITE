@@ -2,6 +2,8 @@
 
 A static e-commerce storefront built with HTML, CSS, and JavaScript. This project simulates a fashion and lifestyle shopping experience with product browsing, cart management, user authentication flow, and admin pages.
 
+## Demo :-
+
 ## ✅ Project Overview
 
 `NEST E_COMMERCE WEBSITE` is a front-end website that provides:
