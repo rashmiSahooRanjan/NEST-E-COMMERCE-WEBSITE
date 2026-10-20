@@ -104,6 +104,14 @@ Below are the screenshot files used to illustrate the website pages. Add these i
 - Product and user session data are managed locally in the browser using `localStorage`.
 - Admin pages are present for demo purposes and rely on client-side logic.
 
+## 👨‍💻 Authors
+
+| Name                          | Role      |
+| ----------------------------- | --------- |
+| **Rashmi Ranjan Sahoo** | Developer |
+| **Prachurya Samal**     | Developer |
+| **Rahul Barika**        | Developer |
+
 ## 📌 Credits
 
 Built as a NEST e-commerce website demo using only front-end technologies.
