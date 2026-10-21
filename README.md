@@ -1,6 +1,6 @@
 # NEST E_COMMERCE WEBSITE
 
-A static e-commerce storefront built with HTML, CSS, and JavaScript. This project simulates a fashion and lifestyle shopping experience with product browsing, cart management, user authentication flow, and admin pages.
+**NEST E-Commerce Website** is a responsive fashion and lifestyle shopping platform developed using HTML, CSS, and JavaScript. The website provides an interactive online shopping experience with product browsing, category navigation, search functionality, product details, shopping cart management, and checkout pages. It also includes user sign-in and sign-up interfaces, customer account pages, and administrative dashboards for product management, order tracking, and customer overview. Using LocalStorage for cart persistence and basic client-side state management, the project demonstrates front-end web development, responsive UI design, and essential e-commerce workflows across fashion, electronics, and home and kitchen categories.
 
 ## Demo :- https://nestecommercewebsite.netlify.app/
 
