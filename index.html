@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEST - Fresh Groceries, Electronics &amp; Everyday Supermarket</title>
+  <meta name="description"
+    content="NEST is your premier online supermarket for fresh organic groceries, smart electronics, stylish home furniture, and trendy fashion with same-day fast delivery.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo/logo.svg">
+
+  <!-- Bootstrap 5 CSS & Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom Design System Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container-xl d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center gap-2">
+        <span><i class="bi bi-geo-alt-fill text-success me-1"></i> Deliver to: <strong>Bengaluru, 560038</strong></span>
+        <span class="top-bar-divider"></span>
+        <span class="text-success fw-bold"><i class="bi bi-lightning-charge-fill"></i> Free delivery on orders over
+          ₹500!</span>
+      </div>
+      <div class="d-flex align-items-center gap-3">
+        <a href="order-details.html"><i class="bi bi-truck me-1"></i> Track Order</a>
+        <span class="top-bar-divider"></span>
+        <a href="admin/dashboard.html" class="fw-bold text-success"><i class="bi bi-shield-lock me-1"></i> Admin
+          Panel</a>
+        <span class="top-bar-divider"></span>
+        <span><i class="bi bi-telephone-fill me-1"></i> 1800 123 4567</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Middle Main Header -->
+  <header class="main-header">
+    <div class="container-xl">
+      <div class="row align-items-center g-3">
+        <!-- Logo -->
+        <div class="col-6 col-lg-3 d-flex align-items-center gap-3">
+          <button class="btn btn-outline-secondary d-lg-none mobile-menu-trigger p-1 border-0" type="button"
+            aria-label="Toggle Navigation">
+            <i class="bi bi-list fs-2 text-dark"></i>
+          </button>
+          <a href="index.html" class="brand-logo" id="header-brand-logo">
+            <img src="assets/images/logo/logo.svg" alt="NEST Store Logo" width="180" height="48">
+          </a>
+        </div>
+
+        <!-- Search Bar with Live Suggestion -->
+        <div class="col-lg-6 d-none d-lg-block">
+          <div class="header-search-wrap">
+            <select class="search-category-select" id="header-cat-select" aria-label="Search Category">
+              <option value="all">All Categories</option>
+              <option value="groceries">Groceries</option>
+              <option value="electronics">Electronics</option>
+              <option value="furniture">Furniture</option>
+              <option value="fashion">Fashion</option>
+              <option value="beauty">Beauty &amp; Wellness</option>
+            </select>
+            <input type="text" class="search-input" placeholder="Search for fresh fruits, electronics, fashion..."
+              aria-label="Search items">
+            <button class="search-btn" type="button" aria-label="Submit Search">
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Header Actions (Wishlist, Cart, Account) -->
+        <div class="col-6 col-lg-3 text-end d-flex align-items-center justify-content-end gap-2 header-actions-desktop">
+          <!-- Wishlist -->
+          <a href="wishlist.html" class="header-action-item text-decoration-none" title="Wishlist">
+            <div class="header-icon-box">
+              <i class="bi bi-heart"></i>
+              <span class="header-action-badge header-wishlist-count" style="display: none;">0</span>
+            </div>
+            <div class="d-none d-xl-block text-start">
+              <div class="header-action-label">Favorite</div>
+              <div class="header-action-value">Wishlist</div>
+            </div>
+          </a>
+
+          <!-- Cart -->
+          <div class="header-action-item position-relative" title="Shopping Cart">
+            <a href="cart.html" class="d-flex align-items-center gap-2 text-decoration-none">
+              <div class="header-icon-box">
+                <i class="bi bi-cart3"></i>
+                <span class="header-action-badge header-cart-count" style="display: none;">0</span>
+              </div>
+              <div class="d-none d-xl-block text-start">
+                <div class="header-action-label">My Cart</div>
+                <div class="header-action-value header-cart-total">₹0</div>
+              </div>
+            </a>
+            <!-- Mini Cart Dropdown -->
+            <div class="mini-cart-dropdown shadow-lg">
+              <div class="d-flex justify-content-between align-items-center pb-2 mb-2 border-bottom">
+                <span class="fw-bold heading-font text-dark">Cart Items</span>
+                <span class="badge bg-success-subtle text-success header-cart-count">0</span>
+              </div>
+              <div id="mini-cart-items-list">
+                <p class="text-center text-muted py-3 my-0">Your cart is empty.</p>
+              </div>
+              <div class="pt-2 border-top mt-2">
+                <div class="d-flex justify-content-between fw-bold mb-3">
+                  <span>Subtotal:</span>
+                  <span class="text-success header-cart-total">₹0</span>
+                </div>
+                <div class="d-flex gap-2">
+                  <a href="cart.html" class="btn btn-sm btn-nest-outline flex-grow-1">View Cart</a>
+                  <a href="checkout.html" class="btn btn-sm btn-nest-primary flex-grow-1">Checkout</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Account -->
+          <div class="header-action-item position-relative">
+            <a href="my-account.html" class="d-flex align-items-center gap-2 text-decoration-none">
+              <div class="header-icon-box">
+                <i class="bi bi-person-circle"></i>
+              </div>
+              <div class="d-none d-xl-block text-start">
+                <div class="header-action-label">Hello,</div>
+                <div class="header-action-value header-user-name">Sign In</div>
+              </div>
+            </a>
+            <!-- Account Menu Dropdown -->
+            <div class="account-menu-dropdown shadow-lg">
+              <div class="pb-2 mb-2 border-bottom">
+                <div class="fw-bold text-dark header-user-name">Guest User</div>
+                <div class="text-muted small">Welcome to NEST</div>
+              </div>
+              <a href="my-account.html" class="d-flex align-items-center gap-2 py-2 text-dark text-decoration-none">
+                <i class="bi bi-person text-success"></i> My Profile
+              </a>
+              <a href="my-orders.html" class="d-flex align-items-center gap-2 py-2 text-dark text-decoration-none">
+                <i class="bi bi-box-seam text-success"></i> Order History
+              </a>
+              <a href="wishlist.html" class="d-flex align-items-center gap-2 py-2 text-dark text-decoration-none">
+                <i class="bi bi-heart text-success"></i> My Wishlist
+              </a>
+              <div class="border-top pt-2 mt-2">
+                <a href="login.html" class="btn btn-sm btn-outline-success w-100 mb-1">Sign In / Switch</a>
+                <a href="admin/login.html" class="btn btn-sm btn-outline-secondary w-100">Admin Login</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Mobile Search Bar -->
+      <div class="d-lg-none mt-3">
+        <div class="header-search-wrap">
+          <input type="text" class="search-input" placeholder="Search products..." aria-label="Search items">
+          <button class="search-btn" type="button" aria-label="Submit Search">
+            <i class="bi bi-search"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar-nest">
+    <div class="container-xl d-flex align-items-center justify-content-between">
+      <div class="d-flex align-items-center">
+        <!-- All Categories Button -->
+        <div class="dropdown me-3">
+          <button class="btn-all-categories dropdown-toggle" type="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <i class="bi bi-grid-fill"></i> Browse All Categories
+          </button>
+          <ul class="dropdown-menu shadow-lg border-0 rounded-3 mt-1 py-2" style="min-width: 250px;">
+            <li><a class="dropdown-item py-2" href="shop.html?category=groceries"><i
+                  class="bi bi-apple text-success me-2"></i> Fresh Fruits &amp; Groceries</a></li>
+            <li><a class="dropdown-item py-2" href="shop.html?category=electronics"><i
+                  class="bi bi-laptop text-primary me-2"></i> Electronics &amp; Gadgets</a></li>
+            <li><a class="dropdown-item py-2" href="shop.html?category=furniture"><i
+                  class="bi bi-lamp text-warning me-2"></i> Furniture &amp; Home Living</a></li>
+            <li><a class="dropdown-item py-2" href="shop.html?category=fashion"><i
+                  class="bi bi-bag text-danger me-2"></i> Fashion &amp; Lifestyle</a></li>
+            <li><a class="dropdown-item py-2" href="shop.html?category=beauty"><i
+                  class="bi bi-flower1 text-info me-2"></i> Beauty &amp; Wellness</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item py-2 fw-bold text-success" href="category.html">View All Categories &rarr;</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Links -->
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link-nest active" href="index.html"><i class="bi bi-house-door"></i>
+              Home</a></li>
+          <li class="nav-item"><a class="nav-link-nest" href="shop.html"><i class="bi bi-shop"></i> Shop</a></li>
+          <li class="nav-item"><a class="nav-link-nest" href="category.html"><i class="bi bi-collection"></i>
+              Categories</a></li>
+          <li class="nav-item"><a class="nav-link-nest" href="wishlist.html"><i class="bi bi-heart"></i> Wishlist</a>
+          </li>
+          <li class="nav-item"><a class="nav-link-nest" href="my-account.html"><i class="bi bi-person"></i> My
+              Account</a></li>
+          <li class="nav-item"><a class="nav-link-nest" href="my-orders.html"><i class="bi bi-truck"></i> Orders</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Support Hotline -->
+      <div class="hotline-box d-none d-xl-flex">
+        <i class="bi bi-headset"></i>
+        <div>
+          <div class="hotline-number">1800 123 4567</div>
+          <span class="text-muted small">24/7 Support Center</span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Homepage Content -->
+  <main class="py-4">
+    <div class="container-xl">
+
+      <!-- Hero Section & Promotional Banners -->
+      <div class="row g-4 mb-4">
+        <!-- Main Hero Banner -->
+        <div class="col-lg-8">
+          <div class="hero-slider-wrap" style="background-image: url('assets/images/banners/hero-banner-1.jpg');">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+              <span class="hero-badge"><i class="bi bi-stars me-1"></i> Special Promotion</span>
+              <h1 class="hero-title">Fresh Groceries &amp; Daily Essentials Delivered Fast</h1>
+              <p class="hero-subtitle">Save up to 40% on fresh organic produce, healthy snacks, electronics &amp; more.
+              </p>
+              <div class="d-flex gap-3">
+                <a href="shop.html" class="btn btn-nest-primary px-4 py-2 fs-6">
+                  <i class="bi bi-bag-check me-1"></i> Shop Now
+                </a>
+                <a href="category.html" class="btn btn-nest-outline px-4 py-2 fs-6 bg-white">
+                  Explore Categories
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Side Promotional Cards -->
+        <div class="col-lg-4 d-flex flex-column gap-4">
+          <div class="side-promo-card flex-grow-1"
+            style="background-image: url('assets/images/banners/promo-electronics.jpg');">
+            <div class="side-promo-overlay"></div>
+            <div class="side-promo-content">
+              <span class="badge bg-warning text-dark fw-bold mb-2">Up to 30% Off</span>
+              <h4 class="fw-bold text-dark heading-font mb-2">Smart Gadgets &amp; Audio</h4>
+              <p class="text-muted small mb-3">Wireless earbuds &amp; watches</p>
+              <a href="shop.html?category=electronics" class="btn btn-sm btn-nest-primary">Shop Now &rarr;</a>
+            </div>
+          </div>
+
+          <div class="side-promo-card flex-grow-1"
+            style="background-image: url('assets/images/banners/promo-fashion.jpg');">
+            <div class="side-promo-overlay"></div>
+            <div class="side-promo-content">
+              <span class="badge bg-danger text-white fw-bold mb-2">New Season</span>
+              <h4 class="fw-bold text-dark heading-font mb-2">Modern Fashion Trends</h4>
+              <p class="text-muted small mb-3">Breathable summer apparel</p>
+              <a href="shop.html?category=fashion" class="btn btn-sm btn-nest-secondary">Discover &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature Assurance Value Badges -->
+      <div class="row row-cols-2 row-cols-md-4 g-3 mb-5">
+        <div class="col">
+          <div class="feature-box">
+            <div class="feature-icon-wrap"><i class="bi bi-tags-fill"></i></div>
+            <div>
+              <h4 class="feature-title">Best Prices &amp; Deals</h4>
+              <p class="feature-desc">Unbeatable everyday savings</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="feature-box">
+            <div class="feature-icon-wrap"><i class="bi bi-truck"></i></div>
+            <div>
+              <h4 class="feature-title">Free Shipping</h4>
+              <p class="feature-desc">On all orders over ₹500</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="feature-box">
+            <div class="feature-icon-wrap"><i class="bi bi-shield-check"></i></div>
+            <div>
+              <h4 class="feature-title">100% Secure Checkout</h4>
+              <p class="feature-desc">Protected online payments</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="feature-box">
+            <div class="feature-icon-wrap"><i class="bi bi-arrow-repeat"></i></div>
+            <div>
+              <h4 class="feature-title">Easy Returns</h4>
+              <p class="feature-desc">Within 30 days hassle-free</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Top Categories of the Week -->
+      <section class="mb-5">
+        <div class="d-flex align-items-center justify-content-between mb-4">
+          <div>
+            <h2 class="fw-bold heading-font text-dark mb-1">Featured Categories</h2>
+            <p class="text-muted small mb-0">Browse our handpicked collections by department</p>
+          </div>
+          <a href="category.html" class="btn btn-sm btn-nest-outline">All Categories &rarr;</a>
+        </div>
+
+        <div class="row row-cols-2 row-cols-sm-3 row-cols-md-6 g-3" id="home-featured-categories">
+          <!-- Injected via JavaScript from SEED_DATA -->
+        </div>
+      </section>
+
+      <!-- Popular Products Section with Category Filter Tabs -->
+      <section class="mb-5">
+        <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4">
+          <div>
+            <h2 class="fw-bold heading-font text-dark mb-1">Popular Products</h2>
+            <p class="text-muted small mb-0">Top-rated items loved by thousands of customers</p>
+          </div>
+
+          <!-- Category Filter Tabs -->
+          <div class="d-flex flex-wrap gap-2" id="home-category-tabs">
+            <button class="category-chip active" data-cat="all">All Products</button>
+            <button class="category-chip" data-cat="groceries">Groceries</button>
+            <button class="category-chip" data-cat="electronics">Electronics</button>
+            <button class="category-chip" data-cat="fashion">Fashion</button>
+            <button class="category-chip" data-cat="furniture">Furniture</button>
+            <button class="category-chip" data-cat="beauty">Beauty</button>
+          </div>
+        </div>
+
+        <!-- Product Cards Grid -->
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4" id="home-popular-products-grid">
+          <!-- Rendered via JS -->
+        </div>
+      </section>
+
+      <!-- Mid-page Promotional Banner -->
+      <section class="mb-5">
+        <div class="hero-slider-wrap py-5 px-4 px-md-5"
+          style="background-image: url('assets/images/banners/hero-banner-3.jpg'); min-height: 280px;">
+          <div class="hero-overlay"
+            style="background: linear-gradient(90deg, rgba(37,61,78,0.95) 0%, rgba(37,61,78,0.7) 100%);"></div>
+          <div class="hero-content text-white">
+            <span class="badge bg-warning text-dark fw-bold mb-3 px-3 py-2">Limited Period Offer</span>
+            <h2 class="hero-title text-white mb-2 fs-1">Get Flat 20% Off On Your First Grocery Order</h2>
+            <p class="text-white-50 mb-4">Use coupon code <strong class="text-warning">SAVE20</strong> during checkout
+              to redeem instantly.</p>
+            <a href="shop.html?category=groceries" class="btn btn-nest-primary px-4 py-2">Claim Offer Now</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- New Arrivals Grid -->
+      <section class="mb-5">
+        <div class="d-flex align-items-center justify-content-between mb-4">
+          <div>
+            <h2 class="fw-bold heading-font text-dark mb-1">New Arrivals</h2>
+            <p class="text-muted small mb-0">Freshly added inventory and latest gadget launches</p>
+          </div>
+          <a href="shop.html?sort=newest" class="btn btn-sm btn-nest-outline">View All New &rarr;</a>
+        </div>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4" id="home-new-arrivals-grid">
+          <!-- Rendered via JS -->
+        </div>
+      </section>
+
+      <!-- Newsletter Box -->
+      <section class="newsletter-section mb-4">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <h3 class="newsletter-title">Stay Home &amp; Get Your Daily Needs From Our Shop</h3>
+            <p class="text-white-50 mb-0">Start your daily shopping with NEST and get exclusive weekly discount coupons.
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <div class="newsletter-input-group ms-lg-auto">
+              <input type="email" class="newsletter-input" placeholder="Enter your email address..."
+                aria-label="Email Address">
+              <button class="newsletter-btn" type="button"
+                onclick="NestUI.showToast('Thank you for subscribing to NEST updates!', 'success', 'Subscribed')">
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-main">
+    <div class="container-xl">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <a href="index.html" class="d-inline-block mb-3">
+            <img src="assets/images/logo/logo.svg" alt="NEST Store" width="160" height="42">
+          </a>
+          <p class="text-muted small mb-3">NEST is a modern, responsive e-commerce web application developed using pure
+            HTML5, CSS3, Bootstrap 5, and vanilla JavaScript with MongoDB database design.</p>
+          <div class="text-muted small mb-1"><i class="bi bi-geo-alt text-success me-2"></i>100 Tech Park Blvd, Silicon
+            Corridor, Bengaluru</div>
+          <div class="text-muted small mb-1"><i class="bi bi-telephone text-success me-2"></i>+91 1800 123 4567</div>
+          <div class="text-muted small"><i class="bi bi-envelope text-success me-2"></i>support@neststore.com</div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-6">
+          <h5 class="footer-heading">Company</h5>
+          <ul class="footer-links">
+            <li><a href="shop.html">About Us</a></li>
+            <li><a href="shop.html">Delivery Information</a></li>
+            <li><a href="shop.html">Privacy Policy</a></li>
+            <li><a href="shop.html">Terms &amp; Conditions</a></li>
+            <li><a href="shop.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-6">
+          <h5 class="footer-heading">Categories</h5>
+          <ul class="footer-links">
+            <li><a href="shop.html?category=groceries">Fresh Groceries</a></li>
+            <li><a href="shop.html?category=electronics">Smart Electronics</a></li>
+            <li><a href="shop.html?category=furniture">Home Furniture</a></li>
+            <li><a href="shop.html?category=fashion">Fashion &amp; Apparel</a></li>
+            <li><a href="shop.html?category=beauty">Beauty &amp; Wellness</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-6">
+          <h5 class="footer-heading">Customer Care</h5>
+          <ul class="footer-links">
+            <li><a href="my-account.html">My Account</a></li>
+            <li><a href="my-orders.html">Order History</a></li>
+            <li><a href="order-details.html">Track My Order</a></li>
+            <li><a href="wishlist.html">Wishlist</a></li>
+            <li><a href="cart.html">Shopping Cart</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 col-6">
+          <h5 class="footer-heading">Admin Store</h5>
+          <ul class="footer-links">
+            <li><a href="admin/login.html">Admin Login</a></li>
+            <li><a href="admin/dashboard.html">Admin Dashboard</a></li>
+            <li><a href="admin/products.html">Manage Products</a></li>
+            <li><a href="admin/orders.html">Manage Orders</a></li>
+            <li><a href="admin/inventory.html">Stock Inventory</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center">
+        <div>&copy; 2026 <strong>NEST E-Commerce Website</strong>. Built with HTML5, CSS3, Bootstrap &amp; Vanilla
+          JavaScript.</div>
+        <div class="d-flex align-items-center gap-3 mt-2 mt-md-0">
+          <span class="text-muted small">Accepted Payments:</span>
+          <i class="bi bi-credit-card fs-5 text-secondary"></i>
+          <i class="bi bi-wallet2 fs-5 text-secondary"></i>
+          <i class="bi bi-cash-coin fs-5 text-secondary"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Project JavaScript Modules -->
+  <script src="assets/js/config.js?v=20261025_03"></script>
+  <script src="assets/js/common.js?v=20261025_03"></script>
+  <script src="assets/js/cart.js?v=20261025_03"></script>
+  <script src="assets/js/wishlist.js?v=20261025_03"></script>
+  <script src="assets/js/products.js?v=20261025_03"></script>
+  <script src="assets/js/search.js?v=20261025_03"></script>
+
+  <!-- Home Page Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Render Categories Grid
+      const catContainer = document.getElementById('home-featured-categories');
+      if (catContainer) {
+        const categories = NestDB.getAll('categories');
+        catContainer.innerHTML = categories.map(c => `
+          <div class="col">
+            <a href="shop.html?category=${c.slug}" class="category-card">
+              <img src="${c.image}" alt="${c.name}" class="category-card-img">
+              <h5 class="category-card-title">${c.name.split('&')[0]}</h5>
+              <p class="category-card-count">${c.itemCount || 4} items</p>
+            </a>
+          </div>
+        `).join('');
+      }
+
+      // 2. Render Popular Products
+      const popularGrid = document.getElementById('home-popular-products-grid');
+      const renderPopular = (cat = 'all') => {
+        let products = NestDB.getAll('products').filter(p => p.status === 'active');
+        if (cat !== 'all') {
+          products = products.filter(p => p.category === cat);
+        }
+        popularGrid.innerHTML = products.slice(0, 8).map(p => NestUI.renderProductCard(p)).join('');
+      };
+      renderPopular();
+
+      // Category tab click
+      document.querySelectorAll('#home-category-tabs .category-chip').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('#home-category-tabs .category-chip').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          renderPopular(btn.getAttribute('data-cat'));
+        });
+      });
+
+      // 3. Render New Arrivals
+      const newGrid = document.getElementById('home-new-arrivals-grid');
+      if (newGrid) {
+        const newProducts = NestDB.getAll('products')
+          .filter(p => p.status === 'active')
+          .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
+          .slice(0, 4);
+        newGrid.innerHTML = newProducts.map(p => NestUI.renderProductCard(p)).join('');
+      }
+    });
+  </script>
+
+</body>
+
+</html>

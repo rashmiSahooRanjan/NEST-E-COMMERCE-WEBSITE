@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="favBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3BB77E"/>
+      <stop offset="100%" stop-color="#1B7845"/>
+    </linearGradient>
+    <linearGradient id="favGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE885"/>
+      <stop offset="50%" stop-color="#F5B82E"/>
+      <stop offset="100%" stop-color="#B86500"/>
+    </linearGradient>
+    <linearGradient id="favTwig" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#78350F"/>
+      <stop offset="50%" stop-color="#B45309"/>
+      <stop offset="100%" stop-color="#552200"/>
+    </linearGradient>
+    <filter id="favGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000000" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- Background Squircle -->
+  <rect x="2" y="2" width="60" height="60" rx="16" fill="url(#favBg)"/>
+
+  <!-- Back leaf -->
+  <path d="M16 28 C14 16, 26 8, 35 10 C37 19, 30 30, 16 28 Z" fill="#71F5B0" opacity="0.9"/>
+
+  <!-- Golden Nest Bowl -->
+  <ellipse cx="32" cy="44" rx="23" ry="10" fill="url(#favTwig)" filter="url(#favGlow)"/>
+  <path d="M12 42 C21 48, 43 48, 52 42" stroke="url(#favGold)" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+  <path d="M15 45 C25 51, 39 51, 49 45" stroke="#78350F" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- Cute Pearl Bird -->
+  <path d="M22 38 C20 27, 27 18, 36 20 C44 21, 50 28, 47 37 C43 41, 28 41, 22 38 Z" fill="#FFFFFF"/>
+  <path d="M26 34 C31 28, 39 27, 43 34 C39 39, 30 38, 26 34 Z" fill="url(#favGold)"/>
+  <!-- Eye -->
+  <circle cx="28" cy="25" r="2.2" fill="#1E293B"/>
+  <circle cx="28.6" cy="24.4" r="0.8" fill="#FFFFFF"/>
+  <!-- Beak -->
+  <polygon points="19,26 13,29 19,31" fill="#F59E0B"/>
+
+  <!-- Front Leaf -->
+  <path d="M8 40 C6 30, 15 26, 21 31 C20 40, 13 44, 8 40 Z" fill="#4ADE80"/>
+  <path d="M10 38 C13 35, 17 33, 19 30" stroke="#FFFFFF" stroke-width="1.2" fill="none" opacity="0.9"/>
+</svg>

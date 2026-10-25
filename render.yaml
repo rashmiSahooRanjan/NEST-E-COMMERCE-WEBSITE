@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: nest-ecommerce
+    env: node
+    plan: free
+    region: oregon
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DB_NAME
+        value: nest_ecommerce
+      - key: MONGODB_URI
+        sync: false

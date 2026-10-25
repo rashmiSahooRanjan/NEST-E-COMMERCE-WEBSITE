@@ -1,0 +1,170 @@
+/* ==========================================================================
+   NEST E-Commerce Website - Responsive Stylesheet (responsive.css)
+   Mobile first tweaks, offcanvas drawers, bottom app navigation bar
+   ========================================================================== */
+
+/* Mobile Bottom Navigation Bar */
+.mobile-bottom-nav {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #FFFFFF;
+  border-top: 1px solid #ECECEC;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.08);
+  z-index: 1040;
+  padding: 8px 12px;
+}
+
+.mobile-bottom-nav-items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mobile-bottom-nav-item a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  color: #7E7E7E;
+  font-size: 11px;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.mobile-bottom-nav-item a.active,
+.mobile-bottom-nav-item a:hover {
+  color: #3BB77E;
+}
+
+.mobile-bottom-nav-item i {
+  font-size: 20px;
+}
+
+.mobile-bottom-nav-badge {
+  position: absolute;
+  top: -4px;
+  right: 6px;
+  background: #3BB77E;
+  color: #FFFFFF;
+  font-size: 10px;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+/* Breakpoint 1200px */
+@media (max-width: 1199.98px) {
+  .hero-banner-content h1 {
+    font-size: 38px;
+  }
+}
+
+/* Breakpoint 991px (Tablets & Mobile) */
+@media (max-width: 991.98px) {
+  .top-bar {
+    display: none;
+  }
+  
+  .desktop-nav-wrap {
+    display: none !important;
+  }
+
+  .mobile-bottom-nav {
+    display: block;
+  }
+
+  body {
+    padding-bottom: 60px; /* space for bottom nav */
+  }
+
+  .hero-banner-content {
+    padding: 30px 20px;
+  }
+
+  .hero-banner-content h1 {
+    font-size: 28px;
+  }
+
+  .hero-slider-wrap {
+    border-radius: 16px;
+  }
+
+  .admin-sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1050;
+  }
+
+  .admin-sidebar.show {
+    transform: translateX(0);
+  }
+
+  .admin-main {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+}
+
+/* Breakpoint 767px (Mobiles) */
+@media (max-width: 767.98px) {
+  .product-img-wrap {
+    height: 160px;
+  }
+
+  .product-title {
+    font-size: 13px;
+  }
+
+  .price-current {
+    font-size: 15px;
+  }
+
+  .btn-add-cart {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .btn-add-cart span {
+    display: none;
+  }
+
+  .btn-add-cart i {
+    margin: 0;
+  }
+
+  .cart-table th, .cart-table td {
+    padding: 10px 8px;
+    font-size: 13px;
+  }
+
+  .footer-widget-col {
+    margin-bottom: 24px;
+  }
+}
+
+/* Breakpoint 575px (Small phones) */
+@media (max-width: 575.98px) {
+  .hero-banner-content h1 {
+    font-size: 22px;
+  }
+
+  .promo-banner {
+    min-height: 180px;
+  }
+
+  .account-sidebar-nav {
+    margin-bottom: 24px;
+  }
+}

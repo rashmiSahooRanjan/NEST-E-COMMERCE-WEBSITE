@@ -1,0 +1,20 @@
+# Operating System files
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*
+
+# Node / Environment
+node_modules/
+.env
+.env.local
+
+# IDE & Editor folders
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Log files
+*.log
+npm-debug.log*

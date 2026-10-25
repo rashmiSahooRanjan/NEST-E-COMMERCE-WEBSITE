@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop All Products - NEST Supermarket</title>
+  <meta name="description"
+    content="Browse our catalog of fresh organic groceries, latest electronics, Scandinavian furniture, and fashion with doorstep delivery.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo/logo.svg">
+
+  <!-- Bootstrap 5 & Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container-xl d-flex justify-content-between align-items-center">
+      <div><i class="bi bi-geo-alt-fill text-success me-1"></i> Deliver to: <strong>Bengaluru, 560038</strong></div>
+      <div class="d-flex align-items-center gap-3">
+        <a href="order-details.html"><i class="bi bi-truck me-1"></i> Track Order</a>
+        <span class="top-bar-divider"></span>
+        <a href="admin/dashboard.html" class="fw-bold text-success"><i class="bi bi-shield-lock me-1"></i> Admin
+          Panel</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="header sticky-top bg-white border-bottom shadow-xs">
+    <div class="container-xl py-3">
+      <div class="row align-items-center g-3">
+        <div class="col-6 col-lg-2">
+          <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+            <img src="assets/images/logo/logo.svg" alt="NEST Supermarket" height="46">
+          </a>
+        </div>
+        <div class="col-12 col-lg-6 order-3 order-lg-2">
+          <form class="header-search-form d-flex align-items-center">
+            <select class="form-select border-0 bg-transparent fw-semibold" style="max-width: 140px; cursor: pointer;"
+              name="category">
+              <option value="all">All Categories</option>
+              <option value="groceries">Groceries</option>
+              <option value="electronics">Electronics</option>
+              <option value="furniture">Furniture</option>
+              <option value="fashion">Fashion</option>
+              <option value="beauty">Beauty</option>
+            </select>
+            <span class="border-end mx-2" style="height: 24px;"></span>
+            <input type="text" name="search" class="form-control border-0 shadow-none"
+              placeholder="Search for items, brands, and categories..." autocomplete="off">
+            <button type="submit" class="btn btn-success rounded-pill px-4 ms-2"><i class="bi bi-search"></i></button>
+          </form>
+        </div>
+        <div class="col-6 col-lg-4 order-2 order-lg-3 text-end">
+          <div class="d-flex align-items-center justify-content-end gap-3">
+            <a href="wishlist.html" class="nav-action-item position-relative text-decoration-none">
+              <i class="bi bi-heart fs-4"></i>
+              <span class="action-badge wishlist-count-badge">0</span>
+              <span class="d-none d-xl-inline ms-1 fw-semibold">Wishlist</span>
+            </a>
+            <a href="cart.html" class="nav-action-item position-relative text-decoration-none">
+              <i class="bi bi-cart3 fs-4"></i>
+              <span class="action-badge cart-count-badge">0</span>
+              <span class="d-none d-xl-inline ms-1 fw-semibold">Cart</span>
+            </a>
+            <div id="header-user-menu"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <div class="bg-light py-3 border-bottom">
+    <div class="container-xl">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0 small">
+          <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none text-muted"><i
+                class="bi bi-house me-1"></i> Home</a></li>
+          <li class="breadcrumb-item active text-success fw-bold" aria-current="page">Shop</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Shop Content -->
+  <main class="py-5">
+    <div class="container-xl">
+      <div class="row g-4">
+        <!-- Sidebar Filters -->
+        <aside class="col-lg-3">
+          <div class="card border-0 shadow-sm rounded-4 p-4 sticky-top" style="top: 100px;">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <h5 class="fw-bold mb-0">Filters</h5>
+              <a href="shop.html" class="text-success small fw-semibold text-decoration-none">Reset All</a>
+            </div>
+
+            <!-- Categories -->
+            <div class="mb-4">
+              <h6 class="fw-bold text-dark mb-3">Categories</h6>
+              <div class="d-flex flex-column gap-2">
+                <a href="shop.html"
+                  class="text-decoration-none text-dark fw-semibold d-flex justify-content-between align-items-center">
+                  <span>All Products</span>
+                  <span class="badge bg-light text-muted">17</span>
+                </a>
+                <a href="category.html?slug=groceries"
+                  class="text-decoration-none text-muted d-flex justify-content-between align-items-center">
+                  <span>Fresh Groceries</span>
+                  <span class="badge bg-light text-muted">4</span>
+                </a>
+                <a href="category.html?slug=electronics"
+                  class="text-decoration-none text-muted d-flex justify-content-between align-items-center">
+                  <span>Electronics & Gadgets</span>
+                  <span class="badge bg-light text-muted">4</span>
+                </a>
+                <a href="category.html?slug=furniture"
+                  class="text-decoration-none text-muted d-flex justify-content-between align-items-center">
+                  <span>Furniture & Living</span>
+                  <span class="badge bg-light text-muted">4</span>
+                </a>
+                <a href="category.html?slug=fashion"
+                  class="text-decoration-none text-muted d-flex justify-content-between align-items-center">
+                  <span>Fashion & Apparel</span>
+                  <span class="badge bg-light text-muted">3</span>
+                </a>
+                <a href="category.html?slug=beauty"
+                  class="text-decoration-none text-muted d-flex justify-content-between align-items-center">
+                  <span>Beauty & Wellness</span>
+                  <span class="badge bg-light text-muted">2</span>
+                </a>
+              </div>
+            </div>
+
+            <hr>
+
+            <!-- Price Filter -->
+            <div class="mb-4">
+              <h6 class="fw-bold text-dark mb-3">Price Range</h6>
+              <input type="range" class="form-range" id="price-range-slider" min="50" max="8000" step="50" value="8000">
+              <div class="d-flex justify-content-between small text-muted mt-2">
+                <span>Min: ₹50</span>
+                <span id="price-range-display" class="fw-bold text-success">Up to ₹8,000</span>
+              </div>
+            </div>
+
+            <hr>
+
+            <!-- Stock Filter -->
+            <div>
+              <h6 class="fw-bold text-dark mb-3">Availability</h6>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="filter-in-stock">
+                <label class="form-check-label small" for="filter-in-stock">
+                  In Stock Only
+                </label>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Catalog Grid -->
+        <section class="col-lg-9">
+          <!-- Catalog Toolbar -->
+          <div class="card border-0 shadow-sm rounded-4 p-3 mb-4">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+              <div class="text-muted small" id="product-count-display">Showing products...</div>
+              <div class="d-flex align-items-center gap-2">
+                <label for="sort-select" class="small text-muted fw-semibold mb-0">Sort by:</label>
+                <select id="sort-select" class="form-select form-select-sm" style="width: 170px;">
+                  <option value="featured">Featured First</option>
+                  <option value="price-low-high">Price: Low to High</option>
+                  <option value="price-high-low">Price: High to Low</option>
+                  <option value="rating">Customer Rating</option>
+                  <option value="newest">New Arrivals</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Grid -->
+          <div id="product-grid" class="row row-cols-1 row-cols-sm-2 row-cols-xl-3 g-4"></div>
+
+          <!-- Load More -->
+          <div class="text-center mt-5">
+            <button id="load-more-btn" class="btn btn-outline-success rounded-pill px-5 py-2 fw-bold"
+              onclick="catalog.loadNextPage()">
+              Load More Products <i class="bi bi-arrow-down ms-1"></i>
+            </button>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- Mobile Bottom Nav -->
+  <nav class="mobile-bottom-nav">
+    <ul class="mobile-bottom-nav-items">
+      <li class="mobile-bottom-nav-item"><a href="index.html"><i class="bi bi-house"></i><span>Home</span></a></li>
+      <li class="mobile-bottom-nav-item"><a href="shop.html" class="active"><i
+            class="bi bi-grid"></i><span>Shop</span></a></li>
+      <li class="mobile-bottom-nav-item"><a href="wishlist.html"><i class="bi bi-heart"></i><span
+            class="mobile-bottom-nav-badge wishlist-count-badge">0</span><span>Wishlist</span></a></li>
+      <li class="mobile-bottom-nav-item"><a href="cart.html"><i class="bi bi-cart"></i><span
+            class="mobile-bottom-nav-badge cart-count-badge">0</span><span>Cart</span></a></li>
+      <li class="mobile-bottom-nav-item"><a href="my-account.html"><i class="bi bi-person"></i><span>Account</span></a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Footer -->
+  <footer class="footer bg-white border-top pt-5 pb-3">
+    <div class="container-xl">
+      <div class="row g-4 pb-4 border-bottom">
+        <div class="col-lg-4">
+          <div class="mb-3"><img src="assets/images/logo/logo.svg" alt="NEST Supermarket" height="44"></div>
+          <p class="text-muted small">Awesome grocery store website template for modern retail shopping with fast
+            same-day delivery.</p>
+        </div>
+        <div class="col-lg-2 col-6">
+          <h6 class="fw-bold text-dark mb-3">Company</h6>
+          <ul class="list-unstyled small text-muted d-flex flex-column gap-2">
+            <li><a href="shop.html" class="text-decoration-none text-muted">About Us</a></li>
+            <li><a href="shop.html" class="text-decoration-none text-muted">Delivery Information</a></li>
+            <li><a href="shop.html" class="text-decoration-none text-muted">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-6">
+          <h6 class="fw-bold text-dark mb-3">Categories</h6>
+          <ul class="list-unstyled small text-muted d-flex flex-column gap-2">
+            <li><a href="category.html?slug=groceries" class="text-decoration-none text-muted">Groceries</a></li>
+            <li><a href="category.html?slug=electronics" class="text-decoration-none text-muted">Electronics</a></li>
+            <li><a href="category.html?slug=furniture" class="text-decoration-none text-muted">Furniture</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h6 class="fw-bold text-dark mb-3">Install App & Secure Payment</h6>
+          <p class="text-muted small">Secured Payment Gateways</p>
+          <div class="d-flex gap-2">
+            <span class="badge bg-light text-dark border p-2">VISA</span>
+            <span class="badge bg-light text-dark border p-2">MasterCard</span>
+            <span class="badge bg-light text-dark border p-2">UPI</span>
+            <span class="badge bg-light text-dark border p-2">COD</span>
+          </div>
+        </div>
+      </div>
+      <div class="text-center pt-3 text-muted small">
+        &copy; 2026 NEST E-Commerce Inc. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/config.js?v=20261025_03"></script>
+  <script src="assets/js/common.js?v=20261025_03"></script>
+  <script src="assets/js/products.js?v=20261025_03"></script>
+  <script src="assets/js/search.js?v=20261025_03"></script>
+  <script>
+    const catalog = new CatalogManager({ containerId: "product-grid", itemsPerPage: 6 });
+    document.addEventListener("DOMContentLoaded", () => {
+      catalog.init();
+    });
+  </script>
+</body>
+
+</html>
